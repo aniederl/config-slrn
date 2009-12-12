@@ -91,7 +91,7 @@ include "etc/private/slrn/slrnrc"
 % Set your favourite editor.  Use %s for the file name and %d for the line
 % where the cursor should be placed (usually at the beginning of the body).
 %set editor_command "jed '%s' -g %d -tmp"
-%set editor_command "vim -c %d '%s'"
+set editor_command "vim -c %d '%s'"
 
 % You can have separate commands for editing posts, mail, and score files.
 %set mail_editor_command "jed '%s' -g %d -tmp --mail-mode"
@@ -100,15 +100,15 @@ include "etc/private/slrn/slrnrc"
 
 % If non-zero, abort posting or email operation if the file was not modified
 % by the editor.
-%set abort_unmodified_edits 0
+set abort_unmodified_edits 1
 
 % In case we need metamail to display an article:
 %set metamail_command "metamail"
 
 % WWW browser to use. Xbrowser is used when the DISPLAY environment variable
 % is set; non_Xbrowser otherwise.
-%set non_Xbrowser "lynx '%s'"
-%set Xbrowser "firefox '%s' &"
+set non_Xbrowser "elinks '%s'"
+set Xbrowser "firefox '%s' &"
 
 % Command to use for printing
 % Note: On Win32, this variable defines the name of the printer queue to use.
