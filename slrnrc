@@ -239,27 +239,27 @@ set process_verbatim_marks 1
 %
 
 % If non-zero, slrn will draw the thread tree using simple ascii characters
-%set simulate_graphic_chars 0
+set simulate_graphic_chars 1
 
 % Enable xterm/win32 mouse support: 1 to enable, 0 to disable
 %set mouse 0
 
 % Draw cursor bar ala tin instead of slrn "->" cursor?
-%set display_cursor_bar	0
+set display_cursor_bar 0
 
 % Set to 1 to have slrn scroll by full page instead of by line.
-%set scroll_by_page 0
+set scroll_by_page 0
 
 % Should color be used to indicate the score of an article?
 % (0) scores do not influence colors (1) scores are colored by their value
 % (2) subjects are colored by score  (3) both are colored by score
-%set color_by_score 3
+set color_by_score 3
 
 % If non-zero, the subjects of unread articles are highlighted
-%set highlight_unread_subjects 1
+set highlight_unread_subjects 2
 
 % If non-zero, URLs are highlighted.
-%set highlight_urls 1
+set highlight_urls 1
 
 % Enables blinking in monochrome mode and allows bright backgrounds in some
 % color terminals:
@@ -267,96 +267,96 @@ set process_verbatim_marks 1
 
 % This color object is only used when highlight_unread_subjects is set to 2
 % (see the reference manual for details):
-color unread_subject	"white"		"black"	"bold"
-mono  unread_subject	"bold"
+color unread_subject  "white"    "black"  "bold"
+mono  unread_subject  "bold"
 
 % These settings are used for color terminals:
-color article		"lightgray"	"black"
-color author		"magenta"	"black"
-color boldtext		"brightblue"	"black"	"bold"
-color box		"black"		"white"
-color cursor		"brightgreen"	"black"
-color date		"lightgray"	"black"  
-color description	"lightgray"	"black"
-color error		"red"		"black"	"blink"
-color frame		"yellow"	"blue"
-color from_myself	"brightmagenta"	"black"	"bold"
-color group		"lightgray"	"black"	"bold"
-color grouplens_display	"lightgray"	"black"
-color header_name	"green"		"black"	"bold"
-color header_number	"green"		"black"
-color headers		"brightcyan"	"black"
-color neg_score		"green"		"black"
-color pos_score		"blue"		"black"
-color high_score	"red"		"black"	"bold"
-color italicstext	"magenta"	"black"	"bold"
-color menu		"yellow"	"blue"
-color menu_press	"lightgray"	"yellow"
-color message		"lightgray"	"black"
-color normal		"lightgray"	"black"
-color pgpsignature	"lightgray"	"black"
-color quotes		"red"		"black"
-color quotes1		"magenta"	"black"
-color quotes2		"brown"		"black"
-color quotes3		"brown"		"black"
-color quotes4		"brown"		"black"
-color quotes5		"brown"		"black"
-color quotes6		"brown"		"black"
-color quotes7		"brown"		"black"
-color response_char	"green"		"black"	"bold"
-color signature		"red"		"black"
-color selection		"yellow"	"blue"	"bold"
-color status		"yellow"	"blue"
-color subject		"lightgray"	"black"
-color thread_number	"lightgray"	"black"	"bold"
-color tilde		"green"		"black"	"bold"
-color tree		"red"		"black"	"bold"
-color underlinetext	"cyan"		"black"	"underline"
-color url		"white"		"black"	"bold"
-color verbatim		"green"		"black"
+color article           "lightgray"       "black"
+color author            "magenta"         "black"
+color boldtext          "brightblue"      "black"  "bold"
+color box               "black"           "white"
+color cursor            "brightgreen"     "black"
+color date              "lightgray"       "black"
+color description       "lightgray"       "black"
+color error             "red"             "black"  "blink"
+color frame             "yellow"          "blue"
+color from_myself       "brightmagenta"   "black"  "bold"
+color group             "lightgray"       "black"  "bold"
+color grouplens_display "lightgray"       "black"
+color header_name       "green"           "black"  "bold"
+color header_number     "green"           "black"
+color headers           "brightcyan"      "black"
+color neg_score         "green"           "black"
+color pos_score         "blue"            "black"
+color high_score        "red"             "black"  "bold"
+color italicstext       "magenta"         "black"  "bold"
+color menu              "yellow"          "blue"
+color menu_press        "lightgray"       "yellow"
+color message           "lightgray"       "black"
+color normal            "lightgray"       "black"
+color pgpsignature      "lightgray"       "black"
+color quotes            "red"             "black"
+color quotes1           "magenta"         "black"
+color quotes2           "brown"           "black"
+color quotes3           "brown"           "black"
+color quotes4           "brown"           "black"
+color quotes5           "brown"           "black"
+color quotes6           "brown"           "black"
+color quotes7           "brown"           "black"
+color response_char     "green"           "black"  "bold"
+color signature         "red"             "black"
+color selection         "yellow"          "blue"   "bold"
+color status            "yellow"          "blue"
+color subject           "lightgray"       "black"
+color thread_number     "lightgray"       "black"  "bold"
+color tilde             "green"           "black"  "bold"
+color tree              "red"             "black"  "bold"
+color underlinetext     "cyan"            "black"  "underline"
+color url               "white"           "black"  "bold"
+color verbatim          "green"           "black"
 
 % These attributes are for terminals that cannot display color:
-mono article		"none"
-mono author		"none"
-mono boldtext		"bold"
-mono cursor		"bold"	"reverse"
-mono date		"none"
-mono description	"none"
-mono error		"blink"
-mono frame		"reverse"
-mono from_myself	"bold"
-mono group		"bold"
-mono grouplens_display	"none"
-mono header_name	"bold"
-mono header_number	"none"
-mono headers		"none"
-mono high_score		"bold"
-mono italicstext	"bold"
-mono menu		"reverse"
-mono menu_press		"none"
-mono neg_score		"none"
-mono normal		"none"
-mono pgpsignature	"none"
-mono pos_score		"reverse"
-mono quotes		"none"
-mono quotes1		"none"
-mono quotes2		"none"
-mono quotes3		"none"
-mono quotes4		"none"
-mono quotes5		"none"
-mono quotes6		"none"
-mono quotes7		"none"
-mono response_char	"bold"
-mono selection		"bold"  
-mono signature		"none"
-mono status		"reverse"
-mono subject		"none"
-mono thread_number	"bold"
-mono tilde		"bold"
-mono tree		"none"
-mono underlinetext	"underline"
-mono url		"bold"
-mono verbatim	        "none"
+mono article            "none"
+mono author             "none"
+mono boldtext           "bold"
+mono cursor             "bold"      "reverse"
+mono date               "none"
+mono description        "none"
+mono error              "blink"
+mono frame              "reverse"
+mono from_myself        "bold"
+mono group              "bold"
+mono grouplens_display  "none"
+mono header_name        "bold"
+mono header_number      "none"
+mono headers            "none"
+mono high_score         "bold"
+mono italicstext        "bold"
+mono menu               "reverse"
+mono menu_press         "none"
+mono neg_score          "none"
+mono normal             "none"
+mono pgpsignature       "none"
+mono pos_score          "reverse"
+mono quotes             "none"
+mono quotes1            "none"
+mono quotes2            "none"
+mono quotes3            "none"
+mono quotes4            "none"
+mono quotes5            "none"
+mono quotes6            "none"
+mono quotes7            "none"
+mono response_char      "bold"
+mono selection          "bold"
+mono signature          "none"
+mono status             "reverse"
+mono subject            "none"
+mono thread_number      "bold"
+mono tilde              "bold"
+mono tree               "none"
+mono underlinetext      "underline"
+mono url                "bold"
+mono verbatim           "none"
 
 %
 %% 10. Group mode key bindings
