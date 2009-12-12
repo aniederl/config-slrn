@@ -132,27 +132,27 @@ set Xbrowser "firefox '%s' &"
 
 % Filename where articles / email you sent are archived.
 % Note: If these are unset, slrn does not keep a copy of outgoing messages.
-%set save_posts "News/My_Posts"
-%set save_replies "News/My_Replies"
+set save_posts "News/My_Posts"
+set save_replies "News/My_Replies"
 
 % File where failed posts are appended.  Use "" to disable saving.
 %set failed_posts_file "dead.letter"
 
 % Name of score file.
-%set scorefile "News/Score"
+set scorefile "News/Score"
 
 % Name of directory where decoded files are placed.
-%set decode_directory "News"
-  
+set decode_directory "News"
+
 % Directory where all other files are saved.
-%set save_directory "News"
+set save_directory "News"
 
 % Directory where postponed articles are placed. Please make sure it exists.
-%set postpone_directory "News/postponed"
+set postpone_directory "News/postponed"
 
 % Whether to put temporary files for postings, followups and replies in the
 % directory specified by the TMPDIR environment variable or /tmp.
-%set use_tmpdir 0
+set use_tmpdir 1
 
 %
 %% 5. Attribution lines / custom headers
