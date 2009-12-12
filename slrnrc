@@ -220,14 +220,14 @@ set new_subject_breaks_threads 0
 % You can also match all headers starting with a given string and exclude
 % specific headers by preceding them with "!" (e.g. use "X-,!X-Trace:" to
 % display all the "X-"headers except "X-Trace:").
-%visible_headers "From:,Subject:,Newsgroups:,Followup-To:,Reply-To:"
+visible_headers "Subject:,From:,Organization:,Newsgroups:,Date:,Followup-To:,Reply-To:,Message-ID:,Supersedes:,User-Agent:,X-Mailer:,X-Newsreader:,X-Posting-Agent:,X-Http-User-Agent:,X-,!X-Trace:,!X-Complaints-To:,!X-Face:,!X-MSMail-Priority:,!X-MimeOLE:,!X-Priority:,!X-Accept-Language:"
 
 % If non-zero, #v+ and #v- will be interpreted as markers of verbatim lines.
-%set process_verbatim_marks 1
+set process_verbatim_marks 1
 
 % If non-zero, hide #v+/#v- verbatim marks.
 %set hide_verbatim_marks 0
-  
+
 % If non-zero, hide signature in articles.
 %set hide_signature 0
 
