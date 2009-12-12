@@ -184,10 +184,10 @@ set cc_post_string "[This message has also been posted to %n.]"
 % Character set used for the display or terminal; valid values include:
 %   utf-8, iso-8859-1, ibm850, ibm852, koi8 
 % Use if your system does not detect it automatically from locale settings 
-%charset display utf-8
+charset display utf-8
 
 % the character set used for outgoing articles
-%charset outgoing "iso-8859-15,utf-8"
+charset outgoing "utf-8"
 
 % If non-zero, call metamail for MIME formats slrn cannot handle.
 %set use_metamail 1
@@ -207,10 +207,10 @@ set cc_post_string "[This message has also been posted to %n.]"
 % If 10, sort by date with most recent last.
 % If 11, thread then sort by date with most recent last.
 % If 12, use the value of the custom_sort_order variable.
-%set sorting_method 3
+set sorting_method 7
 
 % If non-zero, a header with a new subject will start a new thread.
-%set new_subject_breaks_threads 0
+set new_subject_breaks_threads 0
 
 %
 %% 8. Some preferences for the article pager (see the manual for more)
