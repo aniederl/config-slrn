@@ -26,6 +26,8 @@
 % The name of your signature file.  If "", no signature is added.
 %set signature ".signature"
 
+include "etc/private/slrn/slrnrc"
+
 %
 %% 2. Server specific settings
 %
