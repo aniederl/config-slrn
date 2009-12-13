@@ -54,7 +54,7 @@ include "etc/private/slrn/slrnrc"
 
 % Set this to zero if you want to leave Message-ID generation to your server
 % or your system does not have a proper unique hostname.
-%set generate_message_id 1
+set generate_message_id 1
 
 % If non-zero, slrn reads the active file on each startup.  You might want to
 % use this if your network connection is fast or the server has few groups.
@@ -407,6 +407,7 @@ setkey group evaluate_cmd     "^X<Esc>"   % Read line and interpret it as S-Lang
 setkey group suspend          "^Z"     % Suspend slrn
 setkey group quit             "ZZ"     % Quit slrn
 setkey group quit             ":q\r"
+setkey group quit             "h"
 
 % Group management:
 setkey group catchup          "C"      % Mark all articles as read
@@ -457,8 +458,10 @@ setkey article pipe                 "|"  % Pipe article
 setkey article print                "y"  % Print article
 setkey article decode               ":"  % Decode article
 setkey article suspend              "^Z" % Suspend slrn
-setkey article quit                 "q"  % Quit slrn
-setkey article fast_quit            "Q"  % Quit slrn immediately
+setkey article quit                 "q"  % Leave newsgroup
+setkey article quit                 "h"
+setkey article fast_quit            "ZZ" % Quit slrn immediately
+setkey article fast_quit            ":q"
 
 % Moving in the article pager:
 setkey article article_line_down    "<Esc><Down>" % Scroll article down one line
@@ -541,7 +544,10 @@ setkey article toggle_verbatim_marks   "["      % Show verbatim marks (on/off)
 setkey article enlarge_article_window  "^"      % Enlarge the article window
 setkey article shrink_article_window   "^^"     % Shrink the article window
 setkey article zoom_article_window     "z"      % Maximize/Unmaximize article
-setkey article hide_article            "h"      % Hide/Show the article window
+
+setkey article hide_article            "H"      % Hide/Show the article window
+setkey article hide_article            "l"
+
 setkey article browse_url              "U"      % Search for URL and follow it
 setkey article toggle_sort             "<Esc>S" % Select threading method
 setkey article toggle_collapse_threads "<Esc>t" % Collapse/Uncollapse thread
