@@ -265,6 +265,20 @@ set highlight_urls 1
 % color terminals:
 %set use_blink 1
 
+% Setup actions we want slrn to ask confirmation for (confirm_actions)
+% It's set as an integer, the default is 31 which means that for everything
+% below slrn will ask for confirmation
+
+% 1     Confirm marking groups as read or un-read.
+% 2     Confirm printing an article.
+% 4     Confirm posts, followups, replies and supersedes.
+% 8     Confirm leaving a group by following a news: URL.
+% 16    Confirm quitting slrn.
+
+set confirm_actions 10 % 2 & 8
+%set confirm_actions 31   % 1 & 2 & 4 & 8 & 16
+
+
 % This color object is only used when highlight_unread_subjects is set to 2
 % (see the reference manual for details):
 color unread_subject  "white"    "black"  "bold"
