@@ -139,7 +139,7 @@ set save_replies "News/My_Replies"
 %set failed_posts_file "dead.letter"
 
 % Name of score file.
-set scorefile "News/Score"
+set scorefile "etc/slrn/scoring"
 
 % Name of directory where decoded files are placed.
 set decode_directory "News"

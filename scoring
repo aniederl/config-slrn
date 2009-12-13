@@ -1,0 +1,96 @@
+% vim:ft=slrnsc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Filename: ~/etc/slrn/scoring
+% Purpose: Scoring-File for slrn - Newsreader
+% Author: Andreas Niederl
+%
+% based on the generic slrn scoring file from Michael Prokop available at www.michael-prokop.at
+% Link: http://michael-prokop.at/computer/config/.slrn/scoring
+%
+
+% myself
+%[*]
+%	Score:: 1000
+%		From: John Doe
+
+%% References
+%[*]
+%	Score:: 600
+%		References: ^ *<[^@]*@[^>]*jdoe.something.com>
+%	Score:: 580
+%		References: @[^>]*jdoe.something.com> *$
+%	Score:: 540
+%		References: @[^>]*jdoe.something.com> *<[^<>]*> *$
+%	Score:: 500
+%		References: @[^>]*jdoe.something.com> *<[^<>]*> *<[^<>]*> *$
+
+include ../private/slrn/scoring-myself
+
+% TU-Graz employees
+	Score: 350
+		From: @*\.tugraz\.at>
+		~From: @sbox\.tugraz\.at>
+		~From: @stud[a-z]*\.tugraz\.at>
+
+% plonk Outlook with some exceptions
+[tu-graz.*]
+	Score: -9000
+		X-Newsreader: Microsoft Outlook*
+		~Newsgroup: tu-graz.anzeigen*
+		~Newsgroup: tu-graz.lv*
+		~Newsgroup: tu-graz.*telematik
+		~Newsgroup: tu-graz.studium
+
+% People from TU-Graz or VC-Graz - posting in a !tu-Newsgroup
+[~tu-graz.*]
+	Score:: 200
+		From: @*\.tugraz\.at>
+		From: @*\.tu-graz\.ac\.at>
+		From: @*\.vc-graz\.ac\.at>
+
+[tu-graz.*]
+	Score: 300
+		From: Cancelbot <cancelbot@tugraz\.at>
+
+
+% stupid subjects
+	Score: -500
+		% Mehr als drei »!«
+		Subject: !!!
+		% Ebenso mit »$«
+		Subject: \$\$\$
+		% Ebenso mit »?« (meistens von DAUs)
+		Subject: \?\?\?
+		% Einige Newsreader setzen folgende Floskeln ein, wenn kein Subject
+		% angegeben wird
+		Subject: ^(no subject)$
+		Subject: ^none$
+		Subject: ^Untitled$
+		% Meistens enthält Spam das Schlüsselwort Free im Subject
+		Subject: F[rR][eE][eE]
+		% Andere Schlüsselwörter
+		Subject: [mM][aA][kK][eE].*[mM][oO][nN][eE][yY]
+		Subject: [oO][p]P[pP][oO][rR][tT][uU][nN][iI][tT][yY]
+		Subject: [fF][aA][sS][tT].*[cC][aA][sS][hH]
+		% Alle Subjects, die nicht mindestens einen Kleinbuchstaben enthalten
+		Subject: ^\c[^a-z]*$
+
+% non-plain-text - ARGL!
+	Score: -5000
+		Content-Type: multipart/alternative
+		~Newsgroup: gmane.*
+
+	Score: -5000
+		Content-Type: multipart/mixed
+		~Newsgroup: gmane.*
+
+	Score: -5000
+		Content-Type: multipart/signed
+		~Newsgroup: gmane.*
+
+	Score: -5000
+		Content-Type: text/html
+		~Newsgroup: gmane.*
+
+include ../private/slrn/scoring
+
