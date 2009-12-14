@@ -385,47 +385,36 @@ mono verbatim           "none"
 %
 
 % Cursor movement:
-setkey group line_down        "<Down>"   % Go to the next group
-setkey group line_down        "^N"
-setkey group line_down        "j"
+setkey group line_down        "j"           % Go to the next group
+setkey group line_down        "<Down>"
 
-setkey group line_up          "<Up>"   % Go to the previous group
-%setkey group line_up          "^P"
-setkey group line_up          "k"
+setkey group line_up          "k"           % Go to the previous group
+setkey group line_up          "<Up>"
 
-setkey group page_down        "^V"     % Scroll to the next page
+setkey group page_down        "^F"          % Scroll to the next page
 setkey group page_down        "<PageDown>"
-setkey group page_down        "^D"
-setkey group page_down        "^F"
 
-setkey group page_up          "<Esc>V"    % Scroll to the previous page
+setkey group page_up          "^B"          % Scroll to the previous page
 setkey group page_up          "<PageUp>"
-setkey group page_up          "^U"
-setkey group page_up          "^B"
 
-setkey group bob              "<Esc><"    % Go to the bottom of the list
-setkey group bob              "^K<Up>"
-setkey group bob              "g"
+setkey group bob              "g"           % Go to the bottom of the list
+setkey group eob              "G"           % Go to the top of the list"
 
-setkey group eob              "<Esc>>"    % Go to the top of the list
-setkey group eob              "^K<Down>"
-setkey group eob              "G"
-
-setkey group group_search_forward  "/" % Group keyword search forward
-setkey group group_search_backward "?" % Group keyword search backward
+setkey group group_search_forward  "/"      % Group keyword search forward
+setkey group group_search_backward "?"      % Group keyword search backward
 
 % Actions:
-setkey group select_group     "<Space>"      % Enter the current newsgroup
+setkey group select_group     "l"           % Enter the current newsgroup
+setkey group select_group     "<Space>"
 setkey group select_group     "<Return>"
-setkey group select_group     "l"
 
 setkey group post             "p"      % Post an article
 setkey group post_postponed   "^P"     % Post or edit a postponed article
 setkey group postnews         "P"      % Explicitly tell leafnode to post articles
                                        % in out.going (usually done with fetchnews -- "R")
 
-setkey group refresh_groups   "R"      % Get new news from server
 setkey group fetchnews        "r"      % Tell leafnode to fetch new news and get news from leafnode
+setkey group refresh_groups   "R"      % Get new news from server
 
 setkey group toggle_scoring   "K"      % Select scoring mode
 setkey group repeat_last_key  "."      % Repeat last key sequence
@@ -438,9 +427,8 @@ setkey group quit             "h"
 
 % Group management:
 setkey group catchup          "C"      % Mark all articles as read
-setkey group catchup          "A"
 
-setkey group uncatchup        "<Esc>u" % Mark all articles as unread
+setkey group uncatchup        "u"      % Mark all articles as unread
 setkey group add_group        "a"      % Add a new newsgroup
 setkey group subscribe        "S"      % Subscribe to the current newsgroup
 setkey group unsubscribe      "U"      % Unsubscribe from the current newsgroup
@@ -497,14 +485,11 @@ setkey article article_line_down    "^E"
 
 setkey article article_line_up      "<Esc><Up>"   % Scroll article up   one line
 setkey article article_line_up      "^Y"
-setkey article article_line_up      "-"
 
 setkey article article_page_down    "<Space>"     % Scroll article down one page
 setkey article article_page_down    "^F"
-setkey article article_page_down    "+"
 
 setkey article article_page_up      "<Backspace>" % Scroll article up   one page
-setkey article article_page_up      "b"
 setkey article article_page_up      "^B"
 
 setkey article article_eob          "^"       % Move to the end of the article
@@ -519,22 +504,16 @@ setkey article forward_digest       "g"       % Skip to next digest
 
 % Moving in the header display:
 setkey article header_line_down      "<Down>" % Move to next article
-setkey article header_line_down      "^N"
 setkey article header_line_down      "j"
 
 setkey article header_line_up        "<Up>"   % Move to previous article
-setkey article header_line_up        "^P"
 setkey article header_line_up        "k"
 
-setkey article header_page_down      "^V"         % Scroll down one page
+setkey article header_page_down      "^F"         % Scroll down one page
 setkey article header_page_down      "<PageDown>"
-setkey article header_page_down      "^D"
-setkey article header_page_down      "^F"
 
-setkey article header_page_up        "<Esc>V"     % Scroll up one page
+setkey article header_page_up        "^B"         % Scroll up one page
 setkey article header_page_up        "<PageUp>"
-setkey article header_page_up        "^U"
-setkey article header_page_up        "^B"
 
 setkey article header_eob            "g"    % Go to last article in group
 setkey article header_bob            "G"    % Go to first article in group
