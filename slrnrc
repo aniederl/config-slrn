@@ -466,7 +466,9 @@ setkey article goto_last_read          "L"  % go to the last read article
 
 % Actions:
 setkey article post                 "p"  % Post a new article
-setkey article post_postponed       "P"  % Post/edit a postponed article
+setkey article post_postponed       "^P" % Post/edit a postponed article
+setkey article postnews             "P"  % Explicitly tell leafnode to post articles
+                                         % in out.going (usually done with fetchnews -- "R")
 setkey article followup             "f"  % Post a followup
 setkey article reply                "r"  % Reply to poster
 setkey article forward              "F"  % Forward posting via mail
