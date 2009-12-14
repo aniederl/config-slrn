@@ -492,8 +492,8 @@ setkey article muttpager_line_up    "k"    % Scroll article up   one line
 setkey article muttpager_page_down  "^F"   % Scroll article down one page
 setkey article muttpager_page_up    "^B"   % Scroll article up   one page
 
-setkey article muttpager_eob        "g"       % Move to the end of the article
-setkey article muttpager_bob        "G"       % Move to the beginning
+setkey article muttpager_bob        "g"       % Move to the beginning
+setkey article muttpager_eob        "G"       % Move to the end of the article
 
 setkey article article_left         "<"       % Pan article to the left
 setkey article article_right        ">"       % Pan article to the right
