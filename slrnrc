@@ -33,6 +33,9 @@ include "etc/private/slrn/slrnrc"
 %% Macros
 %
 
+% use slrnmime mime integration
+include "/usr/share/slrnmime/mime.slrnrc"
+
 % leafnode fetch and post integration
 interpret "etc/slrn/fetchnews.sl"
 
