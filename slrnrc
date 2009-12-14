@@ -28,6 +28,14 @@
 
 include "etc/private/slrn/slrnrc"
 
+
+%
+%% Macros
+%
+
+interpret "etc/slrn/fetchnews.sl"
+
+
 %
 %% 2. Server specific settings
 %
@@ -382,7 +390,7 @@ setkey group line_down        "^N"
 setkey group line_down        "j"
 
 setkey group line_up          "<Up>"   % Go to the previous group
-setkey group line_up          "^P"
+%setkey group line_up          "^P"
 setkey group line_up          "k"
 
 setkey group page_down        "^V"     % Scroll to the next page
@@ -412,8 +420,13 @@ setkey group select_group     "<Return>"
 setkey group select_group     "l"
 
 setkey group post             "p"      % Post an article
-setkey group post_postponed   "P"      % Post or edit a postponed article
-setkey group refresh_groups   "r"      % Get new news from server
+setkey group post_postponed   "^P"     % Post or edit a postponed article
+setkey group postnews         "P"      % Explicitly tell leafnode to post articles
+                                       % in out.going (usually done with fetchnews -- "R")
+
+setkey group refresh_groups   "R"      % Get new news from server
+setkey group fetchnews        "r"      % Tell leafnode to fetch new news and get news from leafnode
+
 setkey group toggle_scoring   "K"      % Select scoring mode
 setkey group repeat_last_key  "."      % Repeat last key sequence
 setkey group evaluate_cmd     "^X<Esc>"   % Read line and interpret it as S-Lang
