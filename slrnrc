@@ -240,7 +240,7 @@ set new_subject_breaks_threads 0
 % You can also match all headers starting with a given string and exclude
 % specific headers by preceding them with "!" (e.g. use "X-,!X-Trace:" to
 % display all the "X-"headers except "X-Trace:").
-visible_headers "Subject:,From:,Organization:,Newsgroups:,Date:,Followup-To:,Reply-To:,Message-ID:,Supersedes:,User-Agent:,X-Mailer:,X-Newsreader:,X-Posting-Agent:,X-Http-User-Agent:,X-,!X-Trace:,!X-Complaints-To:,!X-Face:,!X-MSMail-Priority:,!X-MimeOLE:,!X-Priority:,!X-Accept-Language:"
+visible_headers "Subject:,From:,Organization:,Newsgroups:,Date:,Followup-To:,Reply-To:,Message-ID:,Supersedes:,User-Agent:,X-Mailer:,X-Newsreader:,X-Posting-Agent:,X-Http-User-Agent:,X-,!X-Trace:,!X-Complaints-To:,!X-Face:,!X-MSMail-Priority:,!X-MimeOLE:,!X-Priority:,!X-Accept-Language:,!X-Received:,!X-Originating-IP:,!X-Yahoo-Profile:,!X-Yahoo-Newman-Property:,!X-Yahoo-Newman-Id:,!X-Yahoo-Post-IP:,!X-eGroups-Msg-Info:,!X-eGroups-Approved-By:"
 
 % If non-zero, #v+ and #v- will be interpreted as markers of verbatim lines.
 set process_verbatim_marks 1
