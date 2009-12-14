@@ -33,7 +33,11 @@ include "etc/private/slrn/slrnrc"
 %% Macros
 %
 
+% leafnode fetch and post integration
 interpret "etc/slrn/fetchnews.sl"
+
+% make the article pager behave like in mutt / newsbeuter
+interpret "etc/slrn/muttpager.sl"
 
 
 %
@@ -474,49 +478,31 @@ setkey article print                "y"  % Print article
 setkey article decode               ":"  % Decode article
 setkey article suspend              "^Z" % Suspend slrn
 setkey article quit                 "q"  % Leave newsgroup
-setkey article quit                 "h"
 setkey article fast_quit            "ZZ" % Quit slrn immediately
 setkey article fast_quit            ":q"
 
 % Moving in the article pager:
-setkey article article_line_down    "<Esc><Down>" % Scroll article down one line
-setkey article article_line_down    "<Return>"
-setkey article article_line_down    "^E"
 
-setkey article article_line_up      "<Esc><Up>"   % Scroll article up   one line
-setkey article article_line_up      "^Y"
+setkey article muttpager_show_article  "l" % "Enter" article
+setkey article muttpager_quit          "h" % "Leave" article or leave newsgroup
 
-setkey article article_page_down    "<Space>"     % Scroll article down one page
-setkey article article_page_down    "^F"
+setkey article muttpager_line_down  "j"    % Scroll article down one line
+setkey article muttpager_line_up    "k"    % Scroll article up   one line
 
-setkey article article_page_up      "<Backspace>" % Scroll article up   one page
-setkey article article_page_up      "^B"
+setkey article muttpager_page_down  "^F"   % Scroll article down one page
+setkey article muttpager_page_up    "^B"   % Scroll article up   one page
 
-setkey article article_eob          "^"       % Move to the end of the article
-setkey article article_bob          "$"       % Move to the beginning
+setkey article muttpager_eob        "g"       % Move to the end of the article
+setkey article muttpager_bob        "G"       % Move to the beginning
 
 setkey article article_left         "<"       % Pan article to the left
 setkey article article_right        ">"       % Pan article to the right
 
 setkey article article_search       "/"       % Search forward in the article
 setkey article skip_quotes          "<Tab>"   % Skip beyond quoted text
-setkey article forward_digest       "g"       % Skip to next digest
+setkey article forward_digest       "^G"      % Skip to next digest
 
 % Moving in the header display:
-setkey article header_line_down      "<Down>" % Move to next article
-setkey article header_line_down      "j"
-
-setkey article header_line_up        "<Up>"   % Move to previous article
-setkey article header_line_up        "k"
-
-setkey article header_page_down      "^F"         % Scroll down one page
-setkey article header_page_down      "<PageDown>"
-
-setkey article header_page_up        "^B"         % Scroll up one page
-setkey article header_page_up        "<PageUp>"
-
-setkey article header_eob            "g"    % Go to last article in group
-setkey article header_bob            "G"    % Go to first article in group
 
 setkey article goto_article            "J"  % Move to article (number)
 setkey article author_search_forward   "a"  % Author search forward
@@ -552,7 +538,6 @@ setkey article shrink_article_window   "^^"     % Shrink the article window
 setkey article zoom_article_window     "z"      % Maximize/Unmaximize article
 
 setkey article hide_article            "H"      % Hide/Show the article window
-setkey article hide_article            "l"
 
 setkey article browse_url              "U"      % Search for URL and follow it
 setkey article toggle_sort             "<Esc>S" % Select threading method
