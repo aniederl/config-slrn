@@ -39,6 +39,8 @@ interpret "etc/slrn/fetchnews.sl"
 % make the article pager behave like in mutt / newsbeuter
 interpret "etc/slrn/muttpager.sl"
 
+% misc macros e.g. wrapper functions for keybindings
+interpret "etc/slrn/my_macros.sl"
 
 %
 %% 2. Server specific settings
@@ -417,7 +419,9 @@ setkey group post_postponed   "^P"     % Post or edit a postponed article
 setkey group postnews         "P"      % Explicitly tell leafnode to post articles
                                        % in out.going (usually done with fetchnews -- "R")
 
-setkey group fetchnews        "r"      % Tell leafnode to fetch new news and get news from leafnode
+setkey group fetchnews        "w"      % Tell leafnode to fetch new news and get news from leafnode
+setkey group fetchnews_tugraz "r"
+setkey group fetchnews_gmane  "e"
 setkey group refresh_groups   "R"      % Get new news from server
 
 setkey group toggle_scoring   "K"      % Select scoring mode
