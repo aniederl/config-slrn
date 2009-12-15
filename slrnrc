@@ -495,17 +495,27 @@ setkey article fast_quit            ":q"
 
 % Moving in the article pager:
 
-setkey article muttpager_show_article  "l" % "Enter" article
-setkey article muttpager_quit          "h" % "Leave" article or leave newsgroup
+setkey article muttpager_show_article  "l"           % "Enter" article
+setkey article muttpager_show_article  "<Return>"
 
-setkey article muttpager_line_down  "j"    % Scroll article down one line
-setkey article muttpager_line_up    "k"    % Scroll article up   one line
+setkey article muttpager_quit          "h"           % "Leave" article or leave newsgroup
+setkey article muttpager_quit          "q"
 
-setkey article muttpager_page_down  "^F"   % Scroll article down one page
-setkey article muttpager_page_up    "^B"   % Scroll article up   one page
+setkey article muttpager_line_down     "j"           % Scroll article down one line
+setkey article muttpager_line_down     "<Down>"
 
-setkey article muttpager_bob        "g"       % Move to the beginning
-setkey article muttpager_eob        "G"       % Move to the end of the article
+setkey article muttpager_line_up       "k"           % Scroll article up   one line
+setkey article muttpager_line_up       "<Up>"
+
+setkey article muttpager_page_down     "^F"          % Scroll article down one page
+setkey article muttpager_page_down     "<PageDown>"
+
+setkey article muttpager_page_up       "^B"          % Scroll article up   one page
+setkey article muttpager_page_up       "<PageUp>"
+
+setkey article muttpager_bob           "g"           % Move to the beginning
+setkey article muttpager_eob           "G"           % Move to the end of the article
+
 
 setkey article article_left         "<"       % Pan article to the left
 setkey article article_right        ">"       % Pan article to the right
