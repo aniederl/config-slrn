@@ -45,6 +45,9 @@ interpret "etc/slrn/muttpager.sl"
 % use gpg with slrn
 interpret "etc/slrn/gnupg.sl"
 
+% create scorefile entries by pressing one single key
+interpret "etc/slrn/onekey-score.sl"
+
 % misc macros e.g. wrapper functions for keybindings
 interpret "etc/slrn/my_macros.sl"
 
@@ -573,6 +576,27 @@ setkey article help                    "^H"
 % Miscellaneous actions:
 setkey article create_score            "K"        % Create a scorefile entry
 setkey article view_scores             "v"        % Show which rules matched
+
+% create_score(...)
+%
+% 1. score type - can be 's' for "Subject", 'f' for "From" or 'r' for
+%    "References"
+% 2. score value - the score for the entry
+% 3. scope - 't' if the entry should apply to the current ("This") group,
+%    'a' if it should have an effect in all groups.
+% 4. date of expiry - can either be a date string (in format MM/DD/YYYY or
+%    DD-MM-YYYY) or an integer. If it is an integer, it will be
+%    interpreted as how long from now (in days) the entry should remain
+%    valid; if it is zero (or negative), the entry will never expire.
+% 5. apply immediately - if non-zero, the scorefile is reloaded, so the
+%    new entry is applied immediately.
+
+setkey article "OneKeyScore->create_score('f', -100, 't', 30, 1);" "^S"
+
+setkey article OneKeyScore->ignore_subthread "^K"
+setkey article OneKeyScore->watch_subthread  "^W"
+
+
 setkey article locate_article          "<Esc>l"   % Locate article by Message-ID
 setkey article get_children_headers    "<Esc>^P"  % Find all children
 setkey article get_parent_header       "<Esc>p"   % Reconstruct thread
