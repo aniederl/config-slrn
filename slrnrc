@@ -33,23 +33,26 @@ include "etc/private/slrn/slrnrc"
 %% Macros
 %
 
+set macro_directory "etc/slrn"
+
+
 % use slrnmime mime integration
 include "/usr/share/slrnmime/mime.slrnrc"
 
 % leafnode fetch and post integration
-interpret "etc/slrn/fetchnews.sl"
+interpret "fetchnews.sl"
 
 % make the article pager behave like in mutt / newsbeuter
-interpret "etc/slrn/muttpager.sl"
+interpret "muttpager.sl"
 
 % use gpg with slrn
-interpret "etc/slrn/gnupg.sl"
+interpret "gnupg.sl"
 
 % create scorefile entries by pressing one single key
-interpret "etc/slrn/onekey-score.sl"
+interpret "onekey-score.sl"
 
 % misc macros e.g. wrapper functions for keybindings
-interpret "etc/slrn/my_macros.sl"
+interpret "my_macros.sl"
 
 %
 %% 2. Server specific settings
