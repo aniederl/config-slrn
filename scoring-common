@@ -24,7 +24,6 @@
 %	Score:: 500
 %		References: @[^>]*jdoe.something.com> *<[^<>]*> *<[^<>]*> *$
 
-include ../private/slrn/scoring-myself
 
 % TU-Graz employees
 	Score: 350
@@ -91,6 +90,3 @@ include ../private/slrn/scoring-myself
 	Score: -5000
 		Content-Type: text/html
 		~Newsgroup: gmane.*
-
-include ../private/slrn/scoring
-
