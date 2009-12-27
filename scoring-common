@@ -40,6 +40,9 @@
 		~Newsgroup: tu-graz.*telematik
 		~Newsgroup: tu-graz.studium
 
+	Score: 300
+		From: Cancelbot <cancelbot@tugraz\.at>
+
 % People from TU-Graz or VC-Graz - posting in a !tu-Newsgroup
 [~tu-graz.*]
 	Score:: 200
@@ -47,11 +50,7 @@
 		From: @*\.tu-graz\.ac\.at>
 		From: @*\.vc-graz\.ac\.at>
 
-[tu-graz.*]
-	Score: 300
-		From: Cancelbot <cancelbot@tugraz\.at>
-
-
+[*]
 % stupid subjects
 	Score:: -500
 		% Mehr als drei »!«
@@ -72,8 +71,16 @@
 		Subject: [oO][p]P[pP][oO][rR][tT][uU][nN][iI][tT][yY]
 		Subject: [fF][aA][sS][tT].*[cC][aA][sS][hH]
 		% Alle Subjects, die nicht mindestens einen Kleinbuchstaben enthalten
-		Subject: ^\c[^a-z]*$
+		~Subject: \c[a-z]
+		{:
+			 Subject: ^Re:
+			~Subject: ^Re:.*\c[a-z]
+		}
+		% spam
+		Subject: ~~~
 
+
+[*]
 % non-plain-text - ARGL!
 	Score: -5000
 		Content-Type: multipart/alternative
