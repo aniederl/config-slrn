@@ -53,7 +53,7 @@
 
 
 % stupid subjects
-	Score: -500
+	Score:: -500
 		% Mehr als drei »!«
 		Subject: !!!
 		% Ebenso mit »$«
