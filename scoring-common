@@ -65,7 +65,7 @@
 		Subject: ^none$
 		Subject: ^Untitled$
 		% Meistens enthält Spam das Schlüsselwort Free im Subject
-		Subject: F[rR][eE][eE]
+		%Subject: F[rR][eE][eE]
 		% Andere Schlüsselwörter
 		Subject: [mM][aA][kK][eE].*[mM][oO][nN][eE][yY]
 		Subject: [oO][p]P[pP][oO][rR][tT][uU][nN][iI][tT][yY]
