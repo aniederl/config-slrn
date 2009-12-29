@@ -70,7 +70,9 @@
 		Subject: [mM][aA][kK][eE].*[mM][oO][nN][eE][yY]
 		Subject: [oO][p]P[pP][oO][rR][tT][uU][nN][iI][tT][yY]
 		Subject: [fF][aA][sS][tT].*[cC][aA][sS][hH]
+		% stupid social spam
 		Subject: invites you to
+		Subject: has added you
 		% Alle Subjects, die nicht mindestens einen Kleinbuchstaben enthalten
 		~Subject: \c[a-z]
 		{:
