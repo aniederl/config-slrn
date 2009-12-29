@@ -70,6 +70,7 @@
 		Subject: [mM][aA][kK][eE].*[mM][oO][nN][eE][yY]
 		Subject: [oO][p]P[pP][oO][rR][tT][uU][nN][iI][tT][yY]
 		Subject: [fF][aA][sS][tT].*[cC][aA][sS][hH]
+		Subject: invites you to
 		% Alle Subjects, die nicht mindestens einen Kleinbuchstaben enthalten
 		~Subject: \c[a-z]
 		{:
