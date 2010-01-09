@@ -73,6 +73,7 @@
 		% stupid social spam
 		Subject: invites you to
 		Subject: has added you
+		Subject: add you as a friend
 		% Alle Subjects, die nicht mindestens einen Kleinbuchstaben enthalten
 		~Subject: \c[a-z]
 		{:
