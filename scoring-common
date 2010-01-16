@@ -82,6 +82,8 @@
 		%}
 		% spam
 		Subject: ~~~
+		% länger als 100 Zeichen
+		Subject: .{101}
 
 
 [*]
