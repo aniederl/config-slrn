@@ -76,10 +76,10 @@
 		Subject: add you as a friend
 		% Alle Subjects, die nicht mindestens einen Kleinbuchstaben enthalten
 		~Subject: \c[a-z]
-		{:
-			 Subject: ^Re:
-			~Subject: ^Re:.*\c[a-z]
-		}
+		%{:
+		%	 Subject: ^Re:
+		%	~Subject: ^Re:.*\c[a-z]
+		%}
 		% spam
 		Subject: ~~~
 
