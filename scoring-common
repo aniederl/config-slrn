@@ -103,3 +103,12 @@
 	Score: -5000
 		Content-Type: text/html
 		~Newsgroup: gmane.*
+
+% spam on mls
+[gmane.*]
+	Score: -9000
+		X-Spam-Status: ^Yes
+
+	Score: -9999
+		X-AMAZON-CLIENT-HOST: .*
+
