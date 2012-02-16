@@ -108,8 +108,8 @@ Prefs["ignore_value"] = -1000;
 Prefs["watch_value"] = 250;
 Prefs["ignore_expiry"] = 14;
 Prefs["watch_expiry"] = 21;
-Prefs["ignore_immediately"] = 0;
-Prefs["watch_immediately"] = 0;
+Prefs["ignore_immediately"] = 1;
+Prefs["watch_immediately"] = 1;
 Prefs["ignore_deletes_thread"] = 1;
 Prefs["affect_article_at_cursor"] = 0;
 %}}}
