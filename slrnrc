@@ -311,6 +311,15 @@ set wrap_flags 7
 set wrap_method 0
 
 
+% set date format
+%set overview_date_format "%m/%d/%Y %H:%M"
+%set overview_date_format "%d.%m.%Y %H:%M"
+set overview_date_format "%Y-%m-%d %H:%M"
+
+% set article overview format
+header_display_format 0 "%F%B%-5S%G%-5l:[%12r] [%D]%t%s"
+
+
 % This color object is only used when highlight_unread_subjects is set to 2
 % (see the reference manual for details):
 color unread_subject  "white"    "black"  "bold"
@@ -331,6 +340,7 @@ color group             "lightgray"       "black"  "bold"
 color grouplens_display "lightgray"       "black"
 color header_name       "green"           "black"  "bold"
 color header_number     "green"           "black"
+color date              "green"           "black"
 color headers           "brightcyan"      "black"
 color neg_score         "green"           "black"
 color pos_score         "blue"            "black"
